@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+(0..100).each do |p|
+  Post.create(title: Faker::Commerce.product_name, content: Faker::Company.catch_phrase)
+  puts "Created #{p}"
+end
